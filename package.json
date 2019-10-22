@@ -1,0 +1,46 @@
+{
+  "name": "demo-react-spaces",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Simple React Application",
+  "main": "index.js",
+  "keywords": [],
+  "author": "mjackson",
+  "license": "ISC",
+  "dependencies": {
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-spaces": "^0.1.18",
+    "react-spring": "^8.0.27"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "core-js": "^3.3.3",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "open-cli": "^5.0.0",
+    "regenerator-runtime": "^0.13.3",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint src/**/*.js",
+    "start": "webpack-dev-server --mode development --hot --colors  | grep -v node_modules/webpack ",
+    "build": "cp src/index.html public/ && webpack --mode production",
+    "demo": "cd public && open-cli index.html",
+    "profile": "webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json"
+  }
+}
